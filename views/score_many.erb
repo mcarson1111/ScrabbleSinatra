@@ -1,0 +1,45 @@
+<a href='/'>Home</a>
+
+current params: <%= params %><br>
+number_of_words: <%= @number_of_words %><br>
+words: <%= @words %><br>
+scores: <%= @score_array %><br><br>
+
+
+<% if @score_array %>
+  <h1>These are the scores: <%= @score_array %>
+  </h1>
+<% end %>
+
+
+
+<div class="params">
+  <%= params %>
+</div>
+
+<%if @number_of_words == nil %>
+  <form action="" method="post">
+    <fieldset>
+      <label for="word-amount">How many words do you want to score?</label>
+      <input type="number" id="word-amount" value="3" name="number_of_words">
+    </fieldset>
+
+    <input type="submit" value="Score Words!">
+  </form>
+<% end %>
+
+
+<%if @number_of_words %>
+  <form action="" method="post" accept-charset="utf-8">
+    <fieldset>
+      <legend>Words</legend>
+
+      <% @number_of_words.times do %>
+        <label><input type="text" name="word[]" value="" id="word"></label>
+      <% end %>
+    </fieldset>
+
+
+    <input type="submit" value="Submit">
+  </form>
+<% end %>
