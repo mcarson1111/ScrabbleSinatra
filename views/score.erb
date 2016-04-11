@@ -1,22 +1,38 @@
 
 
-<a href='/'>Home</a>
+<header>
+  <h1> Scrabble Scoring! </h1>
 
+  <nav>
+    <a href='/'>Home</a>
 
-<% if @score %>
-  <h1>This is the score: <%= @score %>
-  </h1>
-<% end %>
+    <a href='/score-many'>Scoring Many Words</a>
 
-<div class="params">
-  <%= params %>
-</div>
+    <a href='/score'>Scoring</a>
 
-<form action="" method="post" accept-charset="utf-8">
-  <!-- Method is the http verb that this form is using -->
-  <!-- if action is blank, it defaults to the current path -->
-  <label for="word">Word</label>
-   <input type="text" name="word" value="" id="word">   <!--  peep is born on line 11 , it is an attribute in the html tag -->
+  </nav>
+</header>
 
-  <input type="submit" value="Submit">
-</form>
+<main>
+
+score: <%= @score_array %><br>
+
+    <% if @score %>
+    <h1>This is the score: <%= @score %>
+    </h1>
+  <% end %>
+
+  <div class="params">
+    <%= params %>
+  </div><br>
+
+  <form action="" method="post" accept-charset="utf-8">
+    <!-- Method is the http verb that this form is using -->
+    <!-- if action is blank, it defaults to the current path -->
+    <label for="word">Word</label>
+     <input type="text" name="word" value="" id="word">   <!--  peep is born on line 11 , it is an attribute in the html tag -->
+
+    <input type="submit" value="Submit">
+  </form>
+
+</main>

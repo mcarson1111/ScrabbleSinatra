@@ -1,9 +1,23 @@
-<a href='/'>Home</a>
 
-current params: <%= params %><br>
+<header>
+  <h1> Scrabble Scoring! </h1>
+
+  <nav>
+    <a href='/'>Home</a>
+
+    <a href='/score-many'>Scoring Many Words</a>
+
+    <a href='/score'>Scoring</a>
+
+  </nav>
+</header>
+
+<main>
+
+current_params: <%= @params %><br>
 number_of_words: <%= @number_of_words %><br>
 words: <%= @words %><br>
-scores: <%= @score_array %><br><br>
+scores: <%= @score_array %>
 
 
 <% if @score_array %>
@@ -43,3 +57,5 @@ scores: <%= @score_array %><br><br>
     <input type="submit" value="Submit">
   </form>
 <% end %>
+
+</main>

@@ -1,25 +1,52 @@
-body {
+html {
+margin-top: 0rem;
+width: 100%;
+
+}
+
+  body {
   background-color: pink;
   text-align: center;
   color: purple;
+  margin-top: 0rem;
+  width: 100%;
 }
 
   header{
     display: block;
-    height: 5rem;
-    background-image: url("/images/red_tulips_header.jpg");
-    background-size: 100% auto;
-    /*background-size:100% auto;*/
-    background-position: relative
+    height: 35rem;
+    /*width: 100%;*/
+    opacity:  0.6;
+    background-repeat: no-repeat;
+    background-image: url("/images/Scrabble.jpg");
+    background-size: initial;
+    /*background-attachment: fixed;*/
+    margin-top: 0rem;
   }
 
+h1 {
+  font-size: 6rem;
+  padding-top: 2rem;
+  border: 0px;
+  margin: 0px;
+}
 
 nav {
-  background-color: rgba(255,255,255, 0.75);
-  border-style: solid;
+    background-color: rgba(255,255,255, 0.75);
+    border-style: solid;
+    display: block;
+    position: relative;
+    bottom: 29px;
+    padding: 30px;
+    margin-top: 22rem;
+}
+
+nav a {
+  padding: 100px;
+  font-size: 1.5rem;
+}
+
+main {
+  height: 300px;
   width: 100%;
-  display: block;
-  position: relative;
-  bottom: 60px;
-  padding: 30px;
 }
